@@ -24,4 +24,13 @@ describe("test suite 1", () => {
         }, 500));
         expect(true).to.be.true;
     });
+    it("test 4", async () => {
+        const testParam = process.env.TEST_PARAM || false;
+        console.log(`TEST_PARAM = ${testParam}`);
+        await new Promise(resolve => setTimeout(() => {
+            console.log("test 4 processing...");
+            resolve();
+        }, 500));
+        expect(testParam).to.be.equal("true");
+    });
 });
