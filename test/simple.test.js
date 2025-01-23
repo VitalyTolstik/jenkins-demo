@@ -33,4 +33,7 @@ describe("test suite 1", () => {
         }, 500));
         expect(testParam).to.be.equal("true");
     });
+    it("test 5", async () => {
+        expect(testParam).to.be.equal("true");
+    })
 });
